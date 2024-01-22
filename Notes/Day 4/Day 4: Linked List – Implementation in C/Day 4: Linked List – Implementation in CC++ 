@@ -1,0 +1,25 @@
+Implementation involves: 
+
+ 
+
+temp = new Node(); 
+
+Temp->data=4; 
+
+Temp->link=null; 
+
+ 
+
+The following logic allows for going through a list: 
+
+ 
+
+Node* temp1 = A; 
+
+while (temp1->link != null) 
+
+{ 
+
+temp1= temp1 -> link; 
+
+} 

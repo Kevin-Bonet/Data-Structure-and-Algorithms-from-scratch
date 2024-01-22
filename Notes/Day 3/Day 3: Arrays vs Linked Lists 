@@ -1,0 +1,11 @@
+Cost of inserting an element: array vs linked list 
+
+At beginning - O(n) vs O(1) 
+
+At end - O(1) if not full, if full O(n) vs O(n) 
+
+At ith postion - O(n) vs O(n) 
+
+Deleting will look similarly to inserting 
+
+Ease of use array is easy, linked list is not 

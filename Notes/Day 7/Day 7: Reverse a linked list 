@@ -1,0 +1,43 @@
+What you do is change the head pointer to point at the tail node, making it the new head node 
+
+Then you have every other pointer point in the opposite direction and you make the old head node point to null 
+
+ 
+
+struct Node { 
+
+int data; 
+
+struct Node* next; 
+
+}; 
+
+struct Node* head; 
+
+void Reverse() { 
+
+struct Node *current, *prev, *next; 
+
+current= head; 
+
+prev = NULL; 
+
+while(temp != NULL) { 
+
+next = current->next; 
+
+current->next = prev; 
+
+prev = current; 
+
+current = next; 
+
+} 
+
+head = prev; 
+
+} 
+
+ 
+
+unfinished, come back to this tomorrow, also take a look at previous lesson at the end, try to understand the business of the pointers and the flow of things, it's still confusing 

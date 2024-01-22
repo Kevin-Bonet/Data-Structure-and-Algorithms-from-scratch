@@ -1,0 +1,54 @@
+Looking to get 1hr of a video done, this may take much longer than 1hr 
+
+Ill be taking notes in this page as well as coding on VSC and uploading to Github when im done 
+
+ 
+
+ 
+
+Intro to data structures: (examples) 
+
+-English dictionary is organized as a sorted list of words 
+
+-City map 
+
+-Cash book 
+
+Formal definition: a DS is a way to store and organize data in a computer, so that it 
+
+Can be used efficiently 
+
+We talk about data structures as: 
+
+Mathematical/logical models or abstract data types 
+
+Consider how a tv can be abstractly viewed as a thing that plays audio and video  
+
+A list is an abstract data type 
+
+An array is a concrete implementation 
+
+Implementation 
+
+Abstract data type, define data and operations but no implementation 
+
+ 
+
+We will see their logical view, operations, cost of operations and implementation 
+
+ 
+
+I just realized that the video is broken down into lessons each very short (20min or less). It would be to my benefit to do at least one lesson per day. 
+
+ 
+
+INTRODUCTION TO DATA STRUCTURES IS COMPLETE 
+
+ 
+
+NOW ON TO: Data structures: List as abstract data types 
+
+
+ 
+
+ 

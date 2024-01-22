@@ -1,0 +1,17 @@
+Struct Node 
+
+{ 
+
+int data; 
+
+Node* link; 
+
+} 
+
+ 
+
+(*temp).data is the same as temp->data 
+
+ 
+
+Stopping at 57:42 

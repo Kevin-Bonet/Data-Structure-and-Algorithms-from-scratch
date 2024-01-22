@@ -1,0 +1,31 @@
+-Lets say you call delete(1), which is node at address 10 with value 2 and pointing at address 20 
+
+-temp1 pointer to node is created, and its value is set to the head value, which is 10 
+
+-head = temp1->next                             (temp1->next is the same as (*temp1).next)  
+
+-what that does is that it makes head pointer point to address 20 instead of 10 
+
+-then we say free(temp1), making the function eliminate what was contained in the 10 address 
+
+- return, that ends the case where you want to delete the head node 
+
+ 
+
+-lets say we call delete(2), which is node at 20 
+
+-temp1 pointer to node is created, and its value is set to the head value, which is 10 
+
+-we go into a loop 
+
+-we make temp1 to point to temp1->next, which means we want the next value of the node temp 1 is pointing to, in this case node at address 10 has a next value of 20, which is what temp1 is now equal to  
+
+-temp2 pointer to node is created, and its value is set to temp1->next, which is 0, which means NULL 
+
+-temp1->next = temp2->next, meaning that temp1, which is pointing at address 20, has a node with a next value of 0, but now its equal to temp2->next, temp2 being equal to 0 and node at position 0 being just a NULL, therefore a next value of NULL 
+
+-finally, free(temp2) takes the null at address 0, which is just a NULL 
+
+ 
+
+I now have a better understanding of how the pointer->value notation works. 

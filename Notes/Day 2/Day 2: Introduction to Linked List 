@@ -1,0 +1,55 @@
+Memory can be thought of as left to right or top to bottom 
+
+100, 101, 102, etc. 
+
+Computers have a memory manager 
+
+A programmer can use C to declare variables in memory 
+
+Example, int x; is stored in 4 bytes in memory 
+
+ 
+
+Due to how things get saved, if you have something like an array, it gets saved as a contiguous block. If its too small, then another block must be used, inefficiently using memory  
+
+ 
+
+Linked lists allow to connect several blocks through links 
+
+Using two part blocks, first part the data, second part holds the address it links to. 
+
+ 
+
+In C he can define the node, one for the data another for the address  
+
+Struct Node 
+
+{ 
+
+int data; //4 bytes 
+
+Node* next; // 4 bytes (pointer to node) 
+
+} 
+
+First node is head node, address of the head node gives us access of the complete list 
+
+Last node is tail, has null or zero, does not point to any other node 
+
+ 
+
+To add a node to the list 
+
+Make the node independently 
+
+Give it a value 
+
+Give it the correct address 
+
+Change the address of the other nodes as appropriate 
+
+Time taken to access items in the list is proportional to the amount of items in the list O(n) 
+
+ 
+
+Insertion: O(n) 

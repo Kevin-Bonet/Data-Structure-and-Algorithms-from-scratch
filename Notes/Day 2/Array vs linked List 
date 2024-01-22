@@ -1,0 +1,17 @@
+When to use arrays or linked lists 
+
+ 
+
+Array 
+
+1) cost of accessing an element is constant time O(1) [If priority is accessing items, use array] 
+
+2) Memory requirements. Fixed size, memory may not be available as one large block 
+
+ 
+
+Linked List  
+
+1) average case for accessing elements O(n) 
+
+2) No unused memory, extra memory for pointer variables [if the data is large, then the linked list will take up less memory than an array, also you don’t need one contiguous block, if this is important to you then use linked list] 
