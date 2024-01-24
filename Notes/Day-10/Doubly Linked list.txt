@@ -1,0 +1,39 @@
+Imagine first the structure of a regular linked list:
+
+nodes, two parted, data and next, head is a node that is 
+pointed to with a pointer that has the head node address
+
+the nodes go from  the head pointer, to the head node, to 
+the node specified in the head node next value, and so
+on and so forth untill reaching null
+
+node code for linked list is this:
+
+struct Node {
+    int data;
+    struct Node* next;
+}
+
+head->head node->nth node->null
+
+Doubly Linked List is the same but three parted. The new 
+part is previous, which is like next as in its a pointer 
+that stores an address, but this new pointer goes in the 
+opposite direction and makes it so that nodes have two 
+connections between them, and both the head node and 
+the nth node point to a NUll once
+
+this is the code:
+
+struct Node {
+    int data;
+    struct Node* next;
+    struct Node* prev;
+}
+
+       head
+         |
+         v
+null<-head node<-->nth node->null
+
+
