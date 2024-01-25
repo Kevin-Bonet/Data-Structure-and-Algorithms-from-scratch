@@ -28,6 +28,23 @@ void InsertAtHead(int x) {
     head = newNode;
 }
 
+void InsertAtTail(int x) {
+    struct Node* newNode = GetNewNode(x); //no the same newNode as one in GetNewNode
+    struct Node* last = head; 
+    if(head == NULL) {
+        newNode->prev = NULL;
+        head = newNode;
+        return;
+    }
+
+    while (last->next != NULL)
+        last = last->next;
+    last->next = newNode;
+    newNode->prev = last;
+    return;
+
+}
+
 void Print() {
     struct Node* temp = head;
     printf("Forward: ");
@@ -55,7 +72,11 @@ void ReversePrint() {
 
 int main() {
     head = NULL;
-    InsertAtHead(2); Print(); ReversePrint();
-    InsertAtHead(4); Print(); ReversePrint();
-    InsertAtHead(6); Print(); ReversePrint();
+//    InsertAtHead(2); Print(); ReversePrint();
+//    InsertAtHead(4); Print(); ReversePrint();
+//    InsertAtHead(6); Print(); ReversePrint();
+
+    InsertAtTail(2); Print(); ReversePrint();
+    InsertAtTail(4); Print(); ReversePrint();
+    InsertAtTail(6); Print(); ReversePrint();
 }
