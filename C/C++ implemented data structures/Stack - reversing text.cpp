@@ -4,8 +4,6 @@
 #include <string.h>
 using namespace std;
 
-
-
 void Reverse(char *C, int n) {
     stack<char> S;
     //loop for push
@@ -26,3 +24,5 @@ int main() {
     Reverse(C,strlen(C));
     printf("Output = %s",C);
 }
+
+// this works but refuses to compile in my machine. if i use an online compiler it does work

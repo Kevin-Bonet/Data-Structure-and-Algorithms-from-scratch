@@ -43,3 +43,5 @@ int main() {
     Reverse(C,strlen(C));
     printf("Output = %s",C);
 }
+
+see more like reversing linked lists using stack
