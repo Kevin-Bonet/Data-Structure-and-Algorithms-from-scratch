@@ -1,0 +1,15 @@
+Insert/delete
+    1) at end is O(n)
+    2) at beginning O(1), therfore this is what we use
+
+struct Node {
+    int data;
+    struct Node* link;
+};
+struct Node* top = NULL;
+void Push(int x) {
+    struct Node* temp = (struct Node*)malloc(sizeof(struct node*));
+    temp->data = x;
+    temp->link = top;
+    top = temp;
+}
