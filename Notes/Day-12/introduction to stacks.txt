@@ -1,0 +1,10 @@
+Stack ADT:
+-ADT means abstract data type
+-it refers to features and operations not implementation 
+-Think of stacks as rings on a peg
+-LastInFirstOut convention (LIFO)
+-A stack is a list with the restriction that insertion and deletion
+can only be performed from one end, called the top
+-Operations: push(x), pop(), top(), isEmpty()
+-these operations can be done at constant time O(1)
+-applications: function calls/recursion, undo in text editor, balanced parentheses 
