@@ -1,0 +1,28 @@
+() or {} or []
+Last unclosed, first closed
+solution:
+scan from left to right if opening symbol, add it to a list
+if closing symbol remove last opening symbol in list
+
+pseudocode:
+CheckBalancedParenthesis(exp) {
+    n<=lenght(exp)
+    create a stack:-S
+    for i<-0 to n-1
+    {
+        if exp[i] is '(' or '[' or '{' 
+            Push(exp[i])
+        else if exp[i] is ')' or ']' or '}'
+        {
+            if(S is empty) || (top does not pair with exp[i])
+            {
+                return false
+            }
+            else
+                Pop()
+        }
+    }
+    return S isEmpty? true:false
+}
+
+no actual implementation of check for balanced parenthesis, must look for one myself
