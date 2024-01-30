@@ -1,0 +1,17 @@
+Infix- its the usual way of doing things
+    Pemdas: (human readable)
+        parenthesis ()[]{}
+        exponent [right to left]
+        multiplication and division [left to right]
+        addition and subtraction [left to right]
+
+Prefix (polish notation) (good for machines)
+    <operator><operand><operand>
+
+Postfix (reverse polish notation) (good for machines)
+    <operand><operand><operator>
+
+infix      Prefix     Postfix
+2 + 3       + 2 3      2 3 +
+a+*c        +a*bc      abc*+   
+
