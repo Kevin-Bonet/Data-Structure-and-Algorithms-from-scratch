@@ -1,0 +1,33 @@
+{(A*B)+(c*d)}-e => {(AB*)+(cd*)}-e
+                => {(AB*)(cd*)+}-e
+                => {(AB*)(cd*)+}e-
+                => AB*cd*+e-
+
+lets say A=2 B=3 c=5 d=4 e=9
+
+AB*cd*+e-
+23*54*+9-
+6 54*+9-
+6 20 + 9-
+26 9-
+17
+
+Evaluatepostfix(exp){
+    create a stack S
+    for i<-0 to length(exp)-1
+    {
+        if(exp[i] is operand)
+            Push(exp[i])
+        elseif(exp[i] is operator)
+        {
+            op2<-Pop()
+            op1<-Pop()
+            res<-Perform(exp[i],op1,op2)
+            Push(res)
+        }
+    }
+    return top of stack
+}
+
+Homework: look up mplementation in actual C++ code
+
