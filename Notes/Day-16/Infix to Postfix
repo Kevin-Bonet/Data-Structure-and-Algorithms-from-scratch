@@ -1,0 +1,50 @@
+Infix:    A+(B*C)
+             |
+             v
+Postfix:  ABC*+
+
+Go left to right, pass the operands to postfix expression,
+place operators in the stack, when done, place the operators
+using stack pops.
+
+infx: A+B*C-D*E
+postfix: ABC*+DE*-
+
+((A+B)*C-D)*E -> AB+C*D-E*
+
+Pseudocode:
+InfixToPostfix(exp){
+    create a stack S
+    res<-empty string
+    for i <-0 to length(exp)-1
+    {
+        if exp[i] is operand
+            res<-res+exp[i]
+        else if exp[i] is operator
+        {
+            while(!s.empty() && !IsOpeningParenthesis(s.top()) && HasHigherPrec(s.top(), exp[i]))
+            {
+                res<-res+s.top()
+                s.pop()
+            }
+            s.push(exp[i])
+        }    
+        else if IsOpeningParenthesis(exp[i])
+            s.push(exp[i])
+        else if IsClosingParenthesis(exp[i])
+        {
+            while(!s.empty() && !IsOpeningParenthesis(s.top()))
+            {
+                res<-res+s.top()
+                s.pop()
+            }
+            s.pop()
+        }
+    }
+    while(!s.empty())
+    {
+        res<-res+s.top()
+        s.pop()
+    }
+    return res
+}
