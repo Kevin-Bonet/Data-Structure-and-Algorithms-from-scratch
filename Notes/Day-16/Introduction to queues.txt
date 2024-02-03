@@ -1,0 +1,4 @@
+Queue AbstractDataType
+Queues are FirstInFirstOut (FIFO)
+A queue is a list or collection that insertion can only be performed
+at one end (rear)
