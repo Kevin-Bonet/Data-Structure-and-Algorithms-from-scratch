@@ -1,4 +1,17 @@
 Queue AbstractDataType
 Queues are FirstInFirstOut (FIFO)
 A queue is a list or collection that insertion can only be performed
-at one end (rear)
+at one end (rear) and deletion can be performed at the other end (front)
+
+operatrions:
+1) Enqueue(x) or Push(x) | void Enqueue(int x);
+2) Dequeue() or Pop() | int Dequeue();
+3) front() or Peek()
+4) IsEmpty()
+
+Use cases for queues:
+when only one request at a time can be processed
+    1)    imagine a network printer, it can only print one job at a time, 
+    so as it recieves requests it should queue them up
+    2) process Scheduling
+    3) simulating wait
