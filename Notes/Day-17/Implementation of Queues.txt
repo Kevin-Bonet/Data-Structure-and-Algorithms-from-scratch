@@ -1,0 +1,65 @@
+queues: insertion happens in the rear/tail, deletion occurs in the front/head
+Constant time or O(1) for all 4 functions, enqueue, dequeue, front, isempty
+
+implementation options: 
+array, linked list
+
+Array implementation:
+int A[10]
+front <- -1
+rear <- -1
+Isempty(){
+    if front == -1 && rear == -1
+        return true
+    else
+        return false
+}
+Enqueue(x){
+    if IsFull()
+        return
+    else if IsEmpty() {
+        front <- rear <- 0
+        A[rear] <- x
+    }
+    else{
+        rear <- rear+1
+        A[rear] <- x
+    }
+}
+Dequeue(){
+    if IsEmpty()
+        return
+    else if front == rear
+        front <- rear <- -1
+    else 
+        front <- front+1
+}
+
+for the case of circular arrays/queues:
+    current position = i
+    next position = (i+1)%N
+    previous position = (i+N-1)%N
+Enqueue(x){
+    if (rear+1)%N == front
+        return
+    else if IsEmpty() {
+        front <- rear <- 0
+    }
+    else{
+        rear <- (rear+1)%N
+    }
+    A[rear] <- x
+}
+Dequeue(){
+    if IsEmpty()
+        return
+    else if front == rear
+        front <- rear <- -1
+    else 
+        front <- (front+1)%N
+}
+front(){
+    return A[front]
+}
+
+Homework: Look up online how to implement queues and circular arrays
