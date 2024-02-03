@@ -11,7 +11,7 @@ operatrions:
 
 Use cases for queues:
 when only one request at a time can be processed
-    1)    imagine a network printer, it can only print one job at a time, 
+    1) imagine a network printer, it can only print one job at a time, 
     so as it recieves requests it should queue them up
     2) process Scheduling
     3) simulating wait
