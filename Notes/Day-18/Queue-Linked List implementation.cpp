@@ -11,8 +11,8 @@ struct Node{
     int data;
     struct Node* next;
 };
-struct Node* front = Null;
-struct Node* rear = Null;
+struct Node* front = NULL;
+struct Node* rear = NULL;
 void Enqueue(int x){
     struct Node* temp = (struct Node*)malloc(sizeof(struct Node*));
     temp->data = x;
