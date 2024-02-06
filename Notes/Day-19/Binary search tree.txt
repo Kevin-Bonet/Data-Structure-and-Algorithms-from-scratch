@@ -1,0 +1,21 @@
+what data structure will you use to store a modifiable collection?
+we want to be able to perform the following operations:
+    a) search(x)
+    b) insert(x)
+    c) remove(x)
+good options are linked list or an array
+both are unfortunately O(n) for search and remove, and O(1) for insert
+binary search tree (balanced) is O(log(n)) which is an improvement
+
+A binary search tree is a binary tree in which for each node, value of all 
+the nodes in the left subtree is lesser or equal and value of all the nodes
+in the right subtree is greater.
+
+example, searching for 12:
+                        15
+                10              20
+            8       12      17      25
+root says 15, 12 is less than 15, so we go left
+node says 10, so we go right
+node says 12, we found it and can return it       
+insertion follows the same rules         

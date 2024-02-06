@@ -1,0 +1,25 @@
+binary tree:
+    each node can have at most 2 children
+    nodes will have left and right children, if missing then naturally
+    leaf nodes will have null children
+strict/proper binary tree:
+    each node can have either 2 or 0 children
+complete binary tree:
+    all levels except possibly the last are completely filled and all nodes 
+    are as left as possible
+    max # of nodes at level i = 2^i
+perfect binary tree:
+    max # of nodes in a tree with height h = 2^0+2^1+...+2^h
+                                         h = 2^(h+1)-1
+     (height of perfect binary tree)     h = log2(n+1)-1 
+     (height of complete binary tree)    h = log2(n) 
+Balanced Binary tree:
+    difference between height of left and right subtree for every node is not more
+    than K (mostly 1)
+    height->#of edges in longest path from root to a leaf
+    height of an empty tree = -1
+    height of a tree with 1 node = 0
+we can implement binary tree using:
+    a) dynamically created nodes
+    b) arrays (used for heaps) (for node at index i, left child index is 2i+1 and 
+    right child index is 2i+2) (in a complete binary tree)

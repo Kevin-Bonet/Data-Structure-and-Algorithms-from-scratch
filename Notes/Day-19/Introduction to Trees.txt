@@ -1,0 +1,39 @@
+Linear data structures:
+    array
+    linked list
+    stack
+    queue
+how to decide what to use?
+    what needs to be stored?
+    cost of operations
+    memory usage
+    ease of implementation
+trees are good for:
+    storing naturally heirarchical data (file ssytem)
+    organazing data for quick search, insertion, deletion
+    (binary search trees)
+    trie (dictionary)
+    network routing algorithm
+trees:
+    have root (top node) and nodes (other nodes)
+    only one root
+    direct link to another node? parent node
+    node with no child? leaf
+    same parent? sibling
+    child of sibling node? uncle/nephew relationship 
+    (consider cousins as well)
+trees:
+    are recursive data structures
+    n nodes
+    n-1 edges (since root has no edge going to it)
+depth and height:
+    depth of x = # of edges in path from root to x
+    height of x = # of edges in longest path from 
+    x to a leaf
+binary tree:
+    tree where each node can have at most 2 children
+struct Node{
+    int data;
+    Node* left;
+    Node* right;
+};
