@@ -6,6 +6,58 @@ struct BstNode {
     BstNode* right;
 };
 
+int FindMin(BstNode* root){
+    if(root == NULL){
+        cout<<"Error: Tree is empty\n";
+        return -1;
+    }
+    while(root->left != NULL){
+        root = root->left;
+    }
+    cout<<root->data;
+    cout<<"\n";
+    return root->data;
+}
+
+int FindMinRecursive(BstNode* root){
+    if(root == NULL){
+        cout<<"Error: Tree is empty\n";
+        return -1;
+    }
+    else if(root->left == NULL){
+        cout<<root->data;
+        cout<<"\n";
+        return root->data;
+    }
+    return FindMinRecursive(root->left);
+}
+
+int FindMax(BstNode* root){
+    if(root == NULL){
+        cout<<"Error: Tree is empty\n";
+        return -1;
+    }
+    while(root->right != NULL){
+        root = root->right;
+    }
+    cout<<root->data;
+    cout<<"\n";
+    return root->data;
+}
+
+int FindMaxRecursive(BstNode* root){
+    if(root == NULL){
+        cout<<"Error: Tree is empty\n";
+        return -1;
+    }
+    else if(root->right == NULL){
+        cout<<root->data;
+        cout<<"\n";
+        return root->data;
+    }
+    return FindMaxRecursive(root->right);
+}
+
 BstNode* GetNewNode(int data){
     BstNode* newNode = new BstNode();
     newNode->data = data; // or (*newNode).data = data; 
@@ -41,6 +93,10 @@ root = Insert(root, 20);
 root = Insert(root, 25);
 root = Insert(root, 8);
 root = Insert(root, 12);
+FindMin(root);
+FindMax(root);
+FindMinRecursive(root);
+FindMaxRecursive(root);
 int number;
 cout<<"Enter number to be searched (try 15,10,20,25,8, or 12)\n";
 cin>>number;

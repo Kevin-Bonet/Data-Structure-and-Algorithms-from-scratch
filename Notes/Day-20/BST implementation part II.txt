@@ -1,3 +1,18 @@
+/*allocation and deallocation can only be done in the heap
+memory areas on the computer:
+a) heap
+b) stack
+c) static/global
+d) code (text)
+
+the overall flow of the code is:
+1) make an empty root pointer
+2) make a root node and have the root pointer point to it
+3) make a new node, depending if bigger or smaller data than node place it 
+right or left and have the respective root node point to it
+4) keep making new nodes and place them where appropriate and 
+have the appropriate pointer allocations
+*/
 #include<iostream>
 using namespace std;
 struct BstNode {
