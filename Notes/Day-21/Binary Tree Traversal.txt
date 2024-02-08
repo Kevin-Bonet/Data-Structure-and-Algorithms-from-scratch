@@ -1,0 +1,18 @@
+-Binary trees are not linear data structures
+-Traversing a tree structure is not straight forward and requires its
+own algorithms
+-general techinques are breadth-first and depth-first
+-traversal defined as selecting each node in the tree and reading the data contained
+as efficiently as possible
+-breadth-first is about starting at level 0 with the root node, then go to level 1,
+then level 2, etc. getting each node per level before moving on to the next
+-depth-first is about reaching all the grand children of a node before moving on 
+to the other child. Imagine having the root, looking at the whole left subtree
+and then looking at the whole right subtree
+    -preeorder-<root><left><right>
+    -ineorder-<left><root><right>
+    -postorder-<left><right><root>
+    -thing of root as "reading data" and left or right as "moving in a direction"
+-this can be implemented using recursion
+-Inorder is actually a binary search tree since the values are sorted from low to 
+high
