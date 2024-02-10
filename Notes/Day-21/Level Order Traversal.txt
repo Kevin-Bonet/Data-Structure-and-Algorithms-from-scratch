@@ -1,0 +1,43 @@
+-you start at root, then go to level 1, left to right, 
+then level 2, left to right, etc.
+-going through this in this manner requires help since
+trees dont have pointers/links that point backwards
+-a good idea is to use a queue (FIFO) where we store the
+addresses of discovered nodes, meaning we can see their 
+address but are not yet visiting them
+-then you move to the node that is given by the queue
+-the idea is that before you move to the next level,
+the queue helps you make sure you clear the level you
+are currently on
+
+#include<iostream>
+#include<queue>
+using namespace std;
+struct Node{
+    char data;
+    Node *left;
+    Node *right;
+};
+void LevelOrder (Node *root){
+    if(root==NULL) return;
+    queue<Node*> Q;
+    Q/push(root);
+    while(!Q.empty()){
+        Node* current = Q.front();
+        cout<<current->data<<"";
+        if(current->left != NULL) Q.push(current->left);
+        if(current->right != NULL) Q.push(current->right);
+        Q.pop();
+    }
+}
+int main(){
+
+}
+
+//time complexity = O(n)
+space complexity = O(n)
+
+//implementation of createNode and insertNode fucntion has
+been done before so now its being left as homework
+time complexity = O(n)
+space complexity = O(n)
