@@ -1,0 +1,49 @@
+In a BST, you should be able to perform most tasks in O(h), h being the height
+of a tree
+h (balanced tree) = O(log2(n))
+
+Finding inorder successor in a BST:
+    Case 1: Node has right subtree  
+        Go deep to leftmost node in right subtree or find min in right subtree
+    Case 2: No right subtree
+        Go to the nearest ancestor for which given node would be in left subtree
+
+#include<iostream>
+using namespace std;
+struct Node{
+    int data;
+    struct Node *left;
+    struct Node *right;
+};
+
+struct Node* FindMin(struct Node* root){
+    if(root == NULL) return NULL;
+    while(root->left != NULL)
+        root = root->left;
+    return root;
+}
+
+struct Node* Getsuccessor(struct Node* root,int data){
+    //search the Node O(h)
+    struct Node* current = Find(root,data);
+    if(current==NULL) return NULL;
+    //Case 1: Node has right subtree
+    if(current>right != NULL){
+        return FindMin(current->right);
+    }
+    //Case 2: No right subtree
+    else{
+        struct Node* successor = NULL;
+        struct Node* ancestor = root;
+        while(ancestor != current){
+            if(current->data < ancestor->data){
+                successor = ancestor; //deepest node where current node is in left
+                ancestor = ancestor->left;
+            }
+            else
+                ancestor = ancestor->right;
+        }
+        return successor;
+    }
+
+}
