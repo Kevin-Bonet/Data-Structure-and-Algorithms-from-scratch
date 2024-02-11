@@ -1,0 +1,56 @@
+struct Node{
+    char data;
+    Node *left;
+    Node *right;
+};
+
+bool IsSubtreeLesser(Node* root, int value){
+    if(root == NULL) return true;
+    if(root->data <= value 
+        && IsSubtreeLesser(root->left, value)
+        && IsSubtreeLesser(root->right, value))
+        return true;
+    else
+        return false;
+}
+bool IsSubtreeGreater(Node* root, int value){
+    if(root == NULL) return true;
+    if(root->data <= value 
+        && IsSubtreeGreater(root->left, value)
+        && IsSubtreeGreater(root->right, value))
+        return true;
+    else
+        return false;
+}
+
+bool IsBinarySearchTree(Node* root){
+    if(root == NULL) return true;
+
+    if(IsSubTreeLesser(root->left,root->data)
+    && IsSubtreeGreater(root->right, root->data)
+    && IsBinarySearchTree(root->left)
+    && IsBinarySearchTree(root->right))
+        return true;
+    else
+        return false;
+}
+//the implementation above is very expensive in terms of memory
+//find below a less expensive implementation
+
+bool IsBstUtil(Node* root, int minValue, int maxValue){
+    if(root == NULL) return true;
+
+    if(root->data < minValue 
+    && root->data > maxValue
+    && IsBstUtil(root->left, minValue, maxValue)
+    && IsBstUtil(root->right, minValue, maxValue))
+        return true;
+    else
+        return false;
+}
+
+bool IsBinarySearchTree(Node* root){
+    return IsBstUtil(root, INT_MAX, INT_MIN);
+}
+//this implementation does not handle duplicates or if you are getting results in a 
+sorted order or not
