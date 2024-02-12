@@ -1,0 +1,18 @@
+-how to keep things with a cost that is proportional to the number of vertices
+-using V*V array for edges (adjacency matrix)
+
+example:
+  0 1 2 3 
+0 0 1 1 1
+1 1 0 0 0   
+2 1 0 0 0 
+3 1 0 0 0
+
+-Aij = Aji if symmetrical across diagonal line (if undirected graph)
+-using this system, finding adjacent nodes has a time cost of O(V)+O(V) in other 
+words O(v)
+-what about finding if two nodes are connected? O(V)
+-homework: look up and implement hash tables
+-this is good for time, but much worse for space (O(V^2))
+-adjacency matrix is good if graph is dense or V^2 is too less to matter
+-dont use this, use the adjecency list, next lesson discussion

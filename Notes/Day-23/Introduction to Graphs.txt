@@ -1,0 +1,34 @@
+-Its a series of nodes/vertices connected by edges
+-In the case of a tree, uf N nodes then N-1 edges, in other words one edge for each
+parent-child relationship
+-For a graph there are no rules for connections
+-trees are graphs but graphs are not trees
+-Graph:
+    -A graph G is an ordered pair of a set V of vertices and a set V of vertices and 
+    a set V of vertices and a set E of edges.
+    - G=(V,E)
+    -ordered pair:
+        (a,b) != (b,a)
+-Edges:
+    -directed (one way) (u,v) (Digraph)
+    -undirected (two way) {u,v} (undirected graph)
+-Examples:
+    -Social network like facebook: people are nodes, their friendships are 
+    undirected edges between them
+    -world wide web: links on a website go to another website but they only go
+    in that direction, basically directed edges
+-Web crawling is graph traversal
+-weighted vs unweighted
+-if you have a bunch of cities connected by roads, and you measure the roads by
+distance, you have a weighted graph. Imagine choosing routs where the roads are 
+shortest, you need the distances (weights)
+-an unweighted graph is a weighted graph where all edges are 1 unit
+-self-loop/edge:
+    -why have an edge that goes to itself
+    -an example would be a website that has links that point to the same page, serving
+    as a refresh button
+-Multiedge:
+    -can be directed or undirected
+    -imagine them as flights between cities, sometimes they only go in one direction,
+    sometimes they go in both, and sometimes you have duplicates but they refer to 
+    different things like flights (the flight would be the weight)

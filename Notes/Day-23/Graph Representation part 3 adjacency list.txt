@@ -1,0 +1,30 @@
+- int *A[8];
+-the basic idea is that each row can be a one dimensional array of 
+different size
+A[0]=new int[3];
+A[1]=new int[2];
+A[2]=new int[4];
+-space = O(e) (e being exact number of edges)
+-time = O(v) for linear search, O(logv) for binary search
+
+struct Node{
+    int data;
+    struct Node* next;
+}
+struct Node *A[8]
+
+-we basically use a linked list
+-we use the array of pointers where each pointer points to the head of a linked 
+list, in other words it points to a node
+
+-that was all for an unweighted graph, for a weighted graph:
+
+struct Node{
+    int data;
+    int weight;
+    struct Node* next;
+}
+struct Node *A[8]
+
+homework, see using a binary search tree to store these things, also look into 
+adding and deleting nodes

@@ -1,0 +1,42 @@
+we can create two lists one for verticies and another for edges
+there are dynamic lists we can use in languages such as vector(C++) or 
+arrayList(Java)
+
+//good for undirected graph
+struct Edge
+{
+    char *startVertex;
+    char *endVertex;
+};
+
+OR
+
+class Edge{
+    string startVertex;
+    string endVertex;
+}
+
+//for undirected weighted graph (NOT EFFICIENT)
+{
+    char *startVertex; //can also be integers: int startVertex;
+    char *endVertex; //can also be integers: int endVertex;
+    int weight;
+};
+
+string vertex_list[MAX_SIZE]
+Edge edge_list[MAX_SIZE];
+
+OR
+
+class Edge{
+    string startVertex; //can also be integers: int startVertex;
+    string endVertex; //can also be integers: int endVertex;
+    int weight;
+} 
+
+-vetex list is O(|V|)
+-edge list is O(|E|)
+-Space complexity is O(|V|+|E|)
+-operation: finding adjacent nodes. Running-time: O(|E|)
+-operation: Check if given nodes are connected. Running-time: O(|E|)
+-this is all inefficient, use the methods in next lesson

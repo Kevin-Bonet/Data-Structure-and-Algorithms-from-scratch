@@ -1,0 +1,20 @@
+-number of possible edges in:
+    -a directed graph is 0<=E<=n(n-1)
+    -an undirected graph  0<=E<=(n(n-1))/2
+-dense:too many edges
+-sparse:too few edges
+-walk: a sequence of vertices where each adjacent pair is connected by an edge
+-path (simple): a walk in which no vertices (and thus no edges) are repeated
+-Trail: a walk in which no edges are repeated
+-closed walk: starts and ends at the same vertex and length of walk is greater than 0
+-simple cycle: no repetition other than start and end
+-acyclic graph: a graph with no cycle
+-strongly connected graphs: if there is a path from any vertex to any other vertex
+-if you have an undirected graph you call that connected
+-if you have a directed graph that is not strongly connected meaning that there is 
+not a path from any vertex to any other vertex, but if the edges were turned into
+undirected then it would be a strongly connected graph, then that would be a weakly
+connected graph
+-if a graph is a disjoint connected components then it is not connected
+-a binary tree is an undirected acyclic graph
+-directed acyclic graph (DAG)
